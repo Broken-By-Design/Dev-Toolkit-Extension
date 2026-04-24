@@ -1,0 +1,20 @@
+{
+  "name": "kactoolkit-vite",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@crxjs/vite-plugin": "^2.4.0",
+    "archiver": "^7.0.1",
+    "vite": "^8.0.9"
+  },
+  "dependencies": {
+    "spark-md5": "^3.0.2",
+    "webextension-polyfill": "^0.12.0"
+  }
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>KAC Toolkit Settings</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 40px 20px;
+                font-family: "Inter", system-ui, sans-serif;
+                background: #050505;
+                color: #fff;
+                -webkit-font-smoothing: antialiased;
+                display: flex;
+                justify-content: center;
+            }
+            .container {
+                width: 100%;
+                max-width: 600px;
+                background: #0a0a0a;
+                padding: 30px;
+                border-radius: 8px;
+                border: 1px solid rgba(255, 255, 255, 0.08);
+            }
+            h1 {
+                margin-top: 0;
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+            .description {
+                color: #ccc;
+                font-size: 0.9rem;
+                margin-bottom: 15px;
+                line-height: 1.5;
+            }
+            textarea {
+                width: 100%;
+                height: 250px;
+                background: #121212;
+                color: #fff;
+                border: 1px solid rgba(255, 255, 255, 0.15);
+                border-radius: 6px;
+                padding: 12px;
+                font-family: monospace;
+                font-size: 0.85rem;
+                resize: vertical;
+                box-sizing: border-box;
+                margin-bottom: 15px;
+            }
+            textarea:focus {
+                outline: none;
+                border-color: #e50914;
+            }
+            .btn {
+                display: inline-block;
+                background: #e50914; /* Red accent for the primary action */
+                color: #fff;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 6px;
+                cursor: pointer;
+                font-size: 0.9rem;
+                font-weight: 600;
+                transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            }
+            .btn:hover {
+                background: #f40612;
+                transform: translateY(-2px);
+            }
+            .status {
+                margin-left: 15px;
+                font-size: 0.9rem;
+                color: #4caf50; /* Green success text */
+                opacity: 0;
+                transition: opacity 0.3s;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>KAC Toolkit Settings</h1>
+
+            <p class="description">
+                Enter the URLs where the interceptor should run. <br/>
+                <strong>Format:</strong> One Match Pattern per line (e.g., <code>*://*.example.com/*</code>)
+            </p>
+
+            <textarea id="urlList" placeholder="*://*.example.com/*&#10;*://example.com/*"></textarea>
+
+            <div style="display: flex; align-items: center;">
+                <button class="btn" id="saveBtn">Save URLs</button>
+                <span class="status" id="statusMessage">Saved successfully!</span>
+            </div>
+        </div>
+
+        <script type="module" src="./settings.js"></script>
+    </body>
+</html>
