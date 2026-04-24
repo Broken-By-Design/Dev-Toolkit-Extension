@@ -14,7 +14,8 @@ async function updateInterceptorStatus(enable) {
         js: ["interceptor.js"],
         matches: urlsToIntercept,
         runAt: "document_start",
-        world: "MAIN"
+        world: "MAIN",
+        allFrames: true
       }]);
     }
   } catch (e) {
